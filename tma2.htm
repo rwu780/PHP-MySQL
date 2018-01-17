@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COMP466 Assignment2 TMA2</title>
+	<link rel="stylesheet" type="text/css" href="shared/share.css">
+</head>
+<body>
+	<header class = "header">TMA2</header>
+	<nav class = "sideMenu">
+		<ul>
+			<li><a href="tma2.htm">TMA2</a></li>
+			<li><a href="part1/main.php">Part1</a></li>
+			<li><a href="part2/main.php">Part2</a></li>
+		</ul>
+	</nav>
+
+	<div class = "content">
+		<div>
+			<h1>General Information</h1>
+			<p>
+				Course: COMP466
+				<br>
+				Assignment Number: Assignment2
+				<br>
+				Name and ID: Rui Wu, 3336937
+				<br>
+				Date Begin: Jan 8, 2018
+				<br>
+				Estimated Hours: 40
+				<br>
+				Runnint Web Application at:
+				<a href="http://assignment2.epizy.com/TMA2/tma2.htm">TMA2.htm</a>
+				<br>
+				Guide for users: No need to install any server. Just navigate to the URL.
+			</p>
+
+		</div>
+
+		<div>
+			<h2>Interpretation of the assignmnet</h2>
+			
+			<h3>Part1</h3>
+			<b>Original Description</b>
+			<p>
+				I need to design a web application using MySQL and PHP that provides an onlink bookmarking server to users.
+			</p>
+			<p>
+				The user able to browse the website by clicking on the URL;
+			</p>
+			<p>
+				The user able to add, delete and edit the existing ones in the list after they sign into the program;
+			</p>
+			<p>
+				Need to use JavaScript to valideated the URL are correct and active;
+			</p>
+
+			<b>Interpretation</b>
+			<p>
+				<b>Database</b><br>
+				Since the description mentioned sign in, then the must exist a user table that contain login informations;
+			</p>
+			<p>
+				Also, the application need to store the bookmark users added. 
+			</p>
+			<p>
+				Therefore, we need two table. 1)to store the user information and 2)store the bookmarks the users were storing. 
+			</p>
+
+			<p>
+				<b>Client and Server side</b><br>
+				Welcome page: query the top 10 URL that exists the most inside the database. Query the top 10 website the exists the most
+			</p>
+			<p>
+				Once sign in: retrieve the userID and URL pair for the specified user
+			</p>
+			<p>
+				Add bookmark: validate syntax and active before adding and insert into database
+			</p>
+			<p>
+				Edit bookmark: validate syntax and active before editing and update the database
+			</p>
+			<p>
+				Delete bookmark: delete the bookmark, delete from database
+			</p>
+			<p>
+				There should be checkbox before each URL to allow multiple deleted. But one URL at a time for adding and editing
+			</p>
+
+			<p>
+				<b>Issues with Part1</b>
+			</p>
+			<p>
+				Validate syntax and active: I able to check and validate the URL on my local machine, but however, when I upload to the sever host, the validation no longer works. Try to debug for hours and did not solve any issues. 
+			</p>
+			<p>
+				One URL at a time for editing. Same issues, the code run fine at local server, but no longer works after upload to server. 
+			</p>
+
+			<h3>Part2</h3>
+			<b>Original Description</b>
+			<p>
+				To develop a small-scale online learning management system that can be used to deliver online courses to learners
+				<br>
+				<br>
+				First, design a EML(Educational Markup Language) for field professionals to enter information into the system
+				<br>
+				Then, the program able to parse the EML into HTML for learners to learn online
+				<br>
+				The user need able to navigate to the database and find the content he/she need
+			</p>
+
+			<b>Interpretation</b>
+			<p>
+				<b>Design</b><br>
+			</p>
+			<p>
+				First, the main page will display the available course offer in this application. The user need to select a course to continue. Once the user selected the course, the program will direct and the courseID will be attached to the current session. The application will retrieve the source for lecture and quiz file from the database and load them.
+			</p>
+			<p>
+				The program will parse the lecture and quiz files and get the number of chapters for each file, and output them onto the course page. Then the program will put the number of chapters into a selection field. The user able to select the chapter and retrieve the content(getLectureContent.php, getQuizContent.php).
+			</p>
+			<p>
+				When the user retrieve the lecture content, the quiz content will disappear and the other way around.
+			</p>
+			<p>
+				<b>Educational Markup Language</b><br>
+				There were two type of EML, one for lecture and the other for quizs.
+				<p>
+					The lecture EML will contian the general information, such as courseID, courseName and description. 
+					<br>
+					After the general information section, it contains multiple chapters. Each chapter contain a chapter number, chapter topic and a list of topics for the specific chapter.
+					<br>
+					The program allow user to select specific chapter they want to learn on and view the content for that chapter.
+				</p>
+				<p>
+					The quiz also contain the general informations. After the general informatino, it contains multiple chapters. 
+					<br>
+					Each chapter contains a chapter number, chapter topic and a lists of questions the learner will be tested on.
+				</p>
+
+				The EML was mostly done in XML, because we could name the tag in common words, so everyone able to understand.  
+			</p>
+			<p>
+				<b>Database</b><br>
+				There were three table for this program
+				<ol>
+					<li>To store the course information</li>
+					<li>To store the lecture informaiton</li>
+					<li>To store the quiz information</li>
+
+				</ol>
+			</p>
+			<p>
+				For the first table, it store the course number, course id, short and long description for each course
+			</p>
+			<p>
+				The second table, will store the source file for the relevant EML file. Storing the location of EML instead of storing the actual EML file able to let the professional to edit, change and replace easily. 
+			</p>
+			<p>
+				If storing the actual content of EML file into the database, the size of the database is large, and time for every retrivel is large. And it will be diffcult for professional to edit, change and replace because he/she need to query in tables to find the right content.
+			</p>
+			<p>
+				The last table, will store the location for the relevant EML file. Same reason as the lectureInfo table.
+			</p>
+
+			<p>
+				<b>Learning Content</b>
+				<p>All materials were moved from Assignment1</p>
+			</p>
+			<p>
+				<b>Quizzes</b>
+				<p>All quiz question were moved from Assignment1. Since the assignment did not specify whether to grade the quiz. The application will show the correct answer at the end of the quiz</p>
+			</p>
+
+
+			<p>
+				<b>Issues with Part2</b>
+				<p>
+					Since I was using AJAX to call to different php files, and the host server is free to use, there might be some traffic congestion. In some circumstance, the user might need to wait a little before the content will show up 
+				</p>
+
+		</div>
+
+		<div>
+			<h2>Documentation</h2>
+			<h3>Part1</h3>
+			<p>main.php: index file for part1, it will provide a brief description of the application and contain top 10 popular bookmark</p>
+			<p>signIn.php: provide a sign in interface for the user to sign in. If the username and password pair exist in the database, direct to the welcome.php</p>
+			<p>register.php: provide a register interface for the user. If the username and passward are syntaxly correct, then insert user record to the database, last direct to welcome.php</p>
+			<p>
+				welcome.php: welcome interface after user sign in to the program. It will display a welcome message, and a list of URL the user had stored inside the database.
+				<br>
+				This file also provide three buttons: add, edit and delete for user to add, edit and delete their URLS
+			</p>
+			<p>welcome.js: JavaScript file for welcome.php, it mainly retrieve user input and send GET request to different php handlers</p>
+			<p>addURL.php: It will get the userID from the session and the new URL sent from welcome.js. Then insert the new URL and userID into the database.</p>
+			<p>editURL.php: It will get the userID from the session and the old and new URL sent from welcome.js. Then it will do a update to the database</p>
+			<p>deleteURL.php: It will get the userID from the session and a list of url from welcome.js. Then delete the list of url with userId from the database</p>
+			<p>getUrls.php: retrieve the list of URL the user current had in the database and output them as a list of checkboxes</p>
+			<p>logoug.php: clear the session ID and terminate database connection</p>
+			<p>connectDB.php: connect to db</p>
+
+			<h3>Part2</h3>
+			<p>Material Folder: Contain the course folder. Inside the course folder, contain two EML file for this application</p>
+			<p>main.php: index file for part2, it will provide a brief description of the application and call selectCourse.php to retrieve a list of course from the database, and them display the course as a list of selections</p>
+			<p>selectCourse.php: call from main.php to retrieve a list of course from the database and send back to main.php</p>
+			<p>
+				course.php:  course.php will retrieve and display the description for the selected course from the database. Also, it will call getQuizIndex.php and getLectureIndex.php to retrieve available chapters and quizs for the specific course.
+				<br>
+				If the user selected a quiz, it will call getQuizContent.php to retrieve the quiz content.
+				<br>
+				If the user selected a chapter, it will call getLectureContent.php to retrieve the lecture content.
+			</p>
+			<p>getCourseContent.php: retrieve the description for the specific course and output back to course.php</p>
+			<p>getCourseFile.php: retrieve the source location for the lecture and quiz content</p>
+			<p>loadFiles.php: load the lecture and quiz file</p>
+			<p>getLectureIndex.php: display available chapters for the selected course</p>
+			<p>getQuizIndex.php: display availabe quizs for the selected course</p>
+			<p>getLectureContent.php: display the content for the selected chapter</p>
+			<p>getQuizContent.php: display the content for the selected quiz</p>
+			<p>connectDB.php: connect to db</p>
+			<p>createTable.sql: SQL command to create table</p>
+			<p>logout.php: clear the session and terminate connection to db</p>
+		</div>
+
+		<div>
+			<h2>References</h2>
+			<ul>
+				<li>	
+					https://stackoverflow.com/questions/10926880/using-javascript-to-detect-whether-the-url-exists-before-display-in-iframe
+				</li>
+				<li>
+					https://stackoverflow.com/questions/17726427/check-if-url-is-valid-or-not
+				</li>
+				<li>
+					http://php.net/docs.php
+				</li>
+				<li>
+					https://www.w3schools.com/
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<div class="footer">COMP466 Assignment2</div>
+
+
+</body>
+</html>

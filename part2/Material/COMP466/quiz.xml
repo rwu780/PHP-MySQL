@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Quiz>
+	<general>
+		<courseID>COMP466</courseID>
+		<courseName>Web Technology</courseName>
+		<description>To Test your knowledge on HTML</description>
+
+	</general>
+
+	<chapter>
+		<chapterNumber>1</chapterNumber>
+		<chapterTopic>HTML</chapterTopic>
+		<quiz>
+			<questions>
+				<question>In HTML, which header is consider the most significant?</question>
+				<option>h1</option>
+				<option>h2</option>
+				<option>h5</option>
+				<option>h6</option>
+				<answer>1</answer>
+			</questions>
+			<questions>
+				<question>In HTML, which of the following provide the linking to other resources</question>
+				<option>linking</option>
+				<option>form</option>
+				<option>table</option>
+				<option>image</option>
+				<answer>1</answer>
+			</questions>
+			<questions>
+				<question>In HTML, which input form that will not validate the syntax before submitting to server</question>
+				<option>color</option>
+				<option>email</option>
+				<option>tel</option>
+				<option>url</option>
+				<answer>1</answer>
+			</questions>
+			<questions>
+				<question>In HTML, what is the purpose for aside Element</question>
+				<option>display information on the side</option>
+				<option>provide a link of an alternative resource</option>
+				<option>display information relate the the content, but separate from the flow of text</option>
+				<option>decoration</option>
+				<answer>3</answer>
+			</questions>
+			<questions>
+				<question>In HTML, which of the following is true about figure and figcaption element?</question>
+				<option>figure provides a caption for the image and figcaption describe a figure</option>
+				<option>figure describe a fgure and figcaption provides a caption for the image</option>
+				<option>figure and figcaption both provides caption for the image</option>
+				<option>none of the above</option>
+				<answer>2</answer>
+			</questions>
+		</quiz>
+	</chapter>
+
+	<chapter>
+		<chapterNumber>2</chapterNumber>
+		<chapterTopic>CSS</chapterTopic>
+		<quiz>
+			<questions>
+				<question>In CSS3, what is the purpose of CSS3</question>
+				<option>One more programming languages you need to learn</option>
+				<option>Provide the structure of the web page</option>
+				<option>Specify the look of the web page</option>
+				<option>Provide the functionality of the web page</option>
+				<answer>3</answer>
+			</questions>
+			<questions>
+				<question>In CSS3, what are the possible ways to declare styles?</question>
+				<option>Inline</option>
+				<option>Embedded</option>
+				<option>Both</option>
+				<option>None</option>
+				<answer>3</answer>
+			</questions>
+			<questions>
+				<question>In CSS3, why you would prefer using relative font-size rather than absolute font-size?</question>
+				<option>Easy to make</option>
+				<option>More Flexible Viewing</option>
+				<option>I don't know, may be it is better</option>
+				<option>I fliped a coin and ended up using relative</option>
+				<answer>2</answer>
+			</questions>
+			<questions>
+				<question>In CSS3, what are following are correct</question>
+				<option>margin sets the space between the outside of an elemnet's border and all other content on the page</option>
+				<option>padding sets the distance between the content inside and the to the border</option>
+				<option>All block-level element have a virtual box drawn around them</option>
+				<option>All of the above</option>
+				<answer>4</answer>
+			</questions>
+			<questions>
+				<question>In CSS3, what is the purpose of media type?</question>
+				<option>decide how the page looks like depend on user media"</option>
+				<option>More work, and more funding</option>
+				<option>Different media had differnet programming languages</option>
+				<option>All of the above</option>
+				<answer>1</answer>
+			</questions>
+		</quiz>
+	</chapter>
+
+	<chapter>
+		<chapterNumber>3</chapterNumber>
+		<chapterTopic>JavaScript</chapterTopic>
+		<quiz>
+			<questions>
+				<question>What is the purpose of JavaScript?</question>
+				<option>Enhance the functionality and appearance of web pages</option>
+				<option>Structure and format the web page</option>
+				<option>Both a and b</option>
+				<option>None of above</option>
+				<answer>1</answer>
+			</questions>
+			<questions>
+				<question>Where the memoery location for variables?</question>
+				<option>On the server</option>
+				<option>On your computer</option>
+				<option>On browser</option>
+				<option>ALL</option>
+				<answer>2</answer>
+			</questions>
+			<questions>
+				<question>local variable only be reference inside function scope</question>
+				<option>global variable can be reference at any part of the script</option>
+				<option>local variable only be reference inside function scope</option>
+				<option>If a local variable has the same name as global variable, then global variable is 'hidden'</option>
+				<option>All of above</option>
+				<answer>4</answer>
+			</questions>
+			<questions>
+				<question>Which object enable us to conveniently do math?</question>
+				<option>Math</option>
+				<option>document</option>
+				<option>Boolean</option>
+				<option>Number</option>
+				<answer>1</answer>
+			</questions>
+			<questions>
+				<question>Which obeject enable to manipulate document in the browser?</question>
+				<option>Time</option>
+				<option>Boolean</option>
+				<option>Number</option>
+				<option>document</option>
+				<answer>4</answer>
+			</questions>
+		</quiz>
+	</chapter>
+</Quiz>
